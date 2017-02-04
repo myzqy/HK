@@ -1,0 +1,134 @@
+/*
+* 首页样式
+* */
+@import '../public/var.less';
+//智慧生活
+.live{
+  margin-top: 40px;
+  background-color: #a21316;
+  ul{
+    width: @width;
+    margin:0 auto;
+    font-size: 0;
+    text-align: center;
+    li{
+      display: inline-block;
+      position: relative;
+      width: 240px;
+      height: 240px;
+      background-color: @mainColor;
+      font-size: 16px;
+      vertical-align: top;
+      &.noPhoto{
+        z-index: 1;
+      }
+      .left-text{
+        position: absolute;
+        top:40px;
+        left:0;
+        span{
+          display: inline-block;
+          margin-left: 20px;
+          padding-right: 10px;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        &:before{
+          display: inline-block;
+          position: absolute;
+          top:0px;
+          left:-16px;
+          .triangle-left(16px,@mainColor);
+          content: "";
+        }
+        &.bottom{
+          top:inherit;
+          bottom:40px;
+        }
+      }
+      .right-text{
+        position: absolute;
+        bottom:40px;
+        right:0;
+        span{
+          display: inline-block;
+          margin-right: 20px;
+          padding-left: 10px;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        &:before{
+          display: inline-block;
+          position: absolute;
+          top:0px;
+          right:-16px;
+          .triangle-right(16px,@mainColor);
+          content: "";
+        }
+      }
+    }
+  }
+}
+// 合作伙伴
+.recruit-list{
+  >ul{
+    margin: 50px -3px 0 ;
+    padding-bottom: 50px;
+    font-size: 0;
+  }
+  >ul>li{
+    display: inline-block;
+    width:100%/7;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: top;
+    .info{
+      height: 270px;
+      margin:0px 3px;
+      background-color: #fff;
+    }
+    .title{
+      height: 48px;
+      color: #fff;
+      background-color: @mainColor;
+      font-weight: normal;
+      line-height: 48px;
+      text-align: center;
+    }
+  }
+  .sub-nav{
+    padding:10px 0px 20px;
+    color: @secondTextColor;
+    line-height: 28px;
+    &.cutting{
+      font-size: 0;
+      li{
+        display: inline-block;
+        position: relative;
+        width: 50%;
+        padding-right: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        text-align: right;
+        &:after{
+          display: inline-block;
+          position: absolute;
+          top:0;
+          right:-4px;
+          content: "|";
+        }
+        &.odd{
+          padding-left: 10px;
+          text-align: left;
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

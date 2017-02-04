@@ -1,0 +1,44 @@
+/*
+* 首页样式
+* */
+@import '../public/var.less';
+//APP列表
+.APP-list{
+  ul{
+    padding-top: 30px;
+    font-size: 0;
+  }
+  li{
+    display: inline-block;
+    position: relative;
+    width: 18%;
+    height: 234px;
+    background-color: @secondLineColor;
+    color: #000;
+    font-size: 16px;
+    .transition(width, .2s);
+    .title{
+      padding:15px 0;
+    }
+    .iconfont{
+      color: #000;
+      font-size: 70px;
+    }
+    p{
+      display: none;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &.active{
+      width:28%;
+      background-color: @mainColor;
+      .title,.iconfont,p{
+        display: block;
+        color: #fff;
+      }
+    }
+    &.odd{
+      background-color: @secondColor;
+    }
+  }
+}

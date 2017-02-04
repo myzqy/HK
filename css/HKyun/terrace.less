@@ -1,0 +1,55 @@
+/*
+* 开放平台样式
+* */
+@import '../public/var.less';
+//API详情列表
+.aside-list{
+  float: right;
+  width: 30%;
+  a{
+    display: block;
+    color:@textColor;
+    white-space: nowrap;
+    &:hover{
+      .title{
+        .aHover;
+      }
+    }
+    &.inline-block{
+      display: inline-block;
+    }
+  }
+  .title{
+    padding:20px 0 10px;
+    font-weight: normal;
+  }
+  p{
+    padding-top: 20px;
+    color: @secondTextColor;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  //子菜单
+  .sub-nav{
+    padding-top: 20px;
+    font-size: 0;
+    li{
+      display: inline-block;
+      width: 20%;
+      box-sizing: border-box;
+      color:@secondTextColor;
+      font-size: 14px;
+      line-height: 30px;
+      &.odd{
+        width: 80%;
+        padding-left: 20px;
+      }
+    }
+    a{
+      color: @secondTextColor;
+      &:hover{
+        color:@mainColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.aHover{
+    &:hover{
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+}
+@width : 1215px;
+//主要颜色
+@mainColor : #cb181c;
+.mainColor{color:@mainColor;}
+.mainColorBg{background-color:@mainColor;}
+@mainColorHover : #aa1417;
+.mainColorHover{color:@mainColorHover;}
+.mainColorHoverBg{background-color:@mainColorHover;}
+//主要文字颜色
+@textColor : #000;
+.textColor{color:@textColor;}
+.textColorBg{background-color:@textColor;}
+//次要文字颜色
+@secondTextColor : #808080;
+.secondTextColor{color:@secondTextColor;}
+.secondTextColorBg{background-color:@secondTextColor;}
+//线条颜色
+@lineColor : #b7b7ba;
+.lineColor{color:@lineColor;}
+.lineColorBg{background-color:@lineColor;}
+//次要线条颜色
+@secondLineColor : #dddde1;
+.secondLineColor{color:@secondLineColor;}
+.secondLineColorBg{background-color:@secondLineColor;}
+//背影颜色
+@bgColor : #f0f0f4;
+.bgColor{background-color: @bgColor;}
+//次要背景颜色
+@secondColor : #c9c9cd;
+.secondColor{color: @secondColor;}
+.secondColorBg{background-color:@secondColor;}
+//底部背景颜色
+@footerBgColor : #000;
+.footerBgColor{background-color: @footerBgColor;}
+/*动画效果*/
+.transition(@attr:all,@time:0.2s){
+  transition: @attr @time;
+  -moz-transition: @attr @time; /* Firefox 4 */
+  -webkit-transition: @attr @time; /* Safari 和 Chrome */
+  -o-transition: @attr @time; /* Opera */
+}
+/*容器阴影兼容*/
+.boxShadow(@size1:0,@size2:0,@size3:5px,@color:rgba(0,0,0,20)){
+  -moz-box-shadow:@size1 @size2 @size3 @color;
+  -webkit-box-shadow:@size1 @size2 @size3 @color;
+  box-shadow:@size1 @size2 @size3 @color;
+}
+/*上方三角形*/
+.triangle-top (@size: 10px,@color: white) {
+  border-top: 0;
+  border-right: @size solid transparent;
+  border-bottom: @size solid @color;
+  border-left: @size solid transparent;
+}
+/*下方三角形*/
+.triangle-bottom(@size: 10px,@color: white) {
+  border-top:  @size solid @color;
+  border-right: @size solid transparent;
+  border-bottom: 0;
+  border-left: @size solid transparent;
+}
+/*右方三角形*/
+.triangle-right(@size: 10px,@color: white) {
+  border-top: @size solid transparent;
+  border-right: 0;
+  border-bottom: @size solid transparent;
+  border-left:  @size solid @color;
+}
+/*左方三角形*/
+.triangle-left(@size: 10px,@color: white) {
+  border-top: @size solid transparent;
+  border-right: @size solid @color;
+  border-bottom: @size solid transparent;
+  border-left:  0;
+}

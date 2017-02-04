@@ -1,0 +1,176 @@
+@import './var.less';
+//合作流程列表
+.cooperation-list{
+  overflow: hidden;
+  width: 100%;
+  >ul{
+    margin: 0 -45px;
+    padding-top: 30px;
+    font-size: 0;
+    >li{
+      display: inline-block;
+      position: relative;
+      width:100%/6;
+      padding:0 45px;
+      box-sizing: border-box;
+      color: @textColor;
+      font-size: 16px;
+      text-align: center;
+      vertical-align: top;
+      &:last-child{
+        .icon-next{
+          display: none;
+        }
+      }
+      .title{
+        padding-top: 20px;
+      }
+      .iconfont{
+        display: inline-block;
+        border-radius: 100%;
+        font-size: 120px;
+      }
+      .icon-next{
+        position: absolute;
+        top:40px;
+        right:-20px;
+        color: @mainColor;
+        font-size: 40px;
+      }
+    }
+  }
+  //子列表
+  .sub-list{
+    padding-top: 20px;
+    li{
+      color: @secondTextColor;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+//底部样式
+#footer{
+  padding:40px 0 10px;
+  background-color: #000;
+  box-sizing: border-box;
+  .container{
+    min-height: 340px;
+  }
+  //联系资料
+  .contact-info{
+      ul{
+        font-size: 0;
+      }
+      li{
+        display: inline-block;
+        padding:0 80px;
+        border-right:1px solid @lineColor;
+        color: #fff;
+        font-size: 16px;
+        vertical-align: top;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+          border:none;
+        }
+        b{
+          display: block;
+          padding:20px 0;
+          color:@mainColor;
+          font-weight: normal;
+          font-size: 34px;
+          font-family: Arial;
+        }
+        //特殊
+        &.special{
+          dd{
+            line-height: 40px;
+          }
+        }
+      }
+      dd{
+        font-size: 14px;
+        line-height: 24px;
+        .icon{
+          width: 26px;
+          height: 26px;
+          margin-left: 10px;
+        }
+        &.line{
+          border-bottom: 1px solid @lineColor;
+        }
+      }
+  }
+  .recruit{
+    color: #fff;
+    .iconfont{
+      margin-left: 5px;
+      color: #fff;
+      font-size: 30px;
+    }
+    &:hover{
+      .aHover;
+    }
+  }
+  //二维码
+  .code{
+    position: absolute;
+    top:50%;
+    right:0;
+    height: 190px;
+    margin-top: -95px;
+    ul{
+      font-size: 0;
+      li{
+        display: inline-block;
+        padding-left: 40px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        .title{
+          padding-top: 15px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+.copy-right{
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  span{
+    padding-right: 5px;
+    font-family: Arial;
+  }
+}
+//页面工具
+.page-tool{
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  z-index: 20;
+  li{
+    width:40px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #808893;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      opacity:0.8;
+    }
+  }
+  .iconfont{
+    color: #fff;
+    font-size: 30px;
+  }
+}

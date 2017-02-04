@@ -1,0 +1,36 @@
+/*
+* 首页样式
+* */
+@import '../public/var.less';
+//定位按扭
+.fixed-btn {
+  position: absolute;
+  top: 70.4%;
+  left: 55.25%;
+  z-index: 1;
+  width: 9.4%;
+  height: 5.5%;
+  background: transparent;
+  cursor: pointer;
+  &:hover {
+    background-color: #fef6f6;
+    opacity: 0.2;
+  }
+}
+//表格
+.table{
+  width: 100%;
+  margin-top:20px;
+  text-align: center;
+  td{
+    padding:10px;
+    border:1px solid @lineColor;
+    color:@secondTextColor;
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: middle;
+    &.w200{
+      width: 200px;
+    }
+  }
+}
